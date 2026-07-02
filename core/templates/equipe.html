@@ -1,0 +1,55 @@
+{% load static %}
+<section id="team" class="section-padding bg-gray">
+    <div class="container">
+
+        <div class="section-header text-center">
+            <h2 class="section-title wow fadeInDown">SOBRE MIM</h2>
+            <div class="shape"></div>
+        </div>
+
+        <div class="row align-items-center">
+
+            <!-- Card -->
+            <div class="col-lg-6">
+
+                {% for f in funcionarios %}
+
+                <div class="team-item wow fadeInLeft">
+
+                    <div class="team-img">
+                        <img class="img-fluid" src="{{f.imagem.thumb.url}}" alt="{{f.nome}}">
+                    </div>
+
+                    <div class="content">
+
+                        <div class="info-text">
+                            <h3>{{f.nome}}</h3>
+                            <p>{{f.cargo}}</p>
+                        </div>
+
+                        <p>{{f.bio}}</p>
+
+                        <ul class="social-icons">
+                            <li><a href="{{f.facebook}}"><i class="lni-facebook-filled"></i></a></li>
+                            <li><a href="{{f.instagram}}"><i class="lni-instagram-filled"></i></a></li>
+                            <li><a href="{{f.twitter}}"><i class="lni-linkedin-original"></i></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- GIF -->
+            <div class="col-lg-6 text-center wow fadeInRight">
+                <img
+                    src="{% static 'assets/img/programador.gif' %}"
+                    class="img-fluid"
+                    style="max-width:800px;"
+                    alt="Programador">
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,63 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+.venv/
+env/
+ENV/
+
+# Variáveis de ambiente
+.env
+
+# Banco de dados SQLite
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos estáticos gerados pelo collectstatic
+staticfiles/
+
+# Uploads de mídia (opcional)
+media/
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Cache do Django
+*.cache
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos do PyCharm
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Cobertura de testes
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Arquivos de distribuição
+build/
+dist/
+*.egg-info/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Backup
+*.bak
+*.swp

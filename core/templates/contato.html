@@ -1,0 +1,76 @@
+{% load static %}
+    <section id="contact" class="section-padding bg-gray">    
+      <div class="container">
+        <div class="section-header text-center">          
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Me contate</h2>
+          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">   
+          <div class="col-lg-7 col-md-12 col-sm-12">
+            <div class="contact-block">
+              
+          <form id="contato" method="post" action="{% url 'index' %}">
+              {% csrf_token %}
+
+              <div class="row">
+
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          {{ form.nome }}
+                          {% for error in form.nome.errors %}
+                              <small class="text-danger">{{ error }}</small>
+                          {% endfor %}
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          {{ form.email }}
+                          {% for error in form.email.errors %}
+                              <small class="text-danger">{{ error }}</small>
+                          {% endfor %}
+                      </div>
+                  </div>
+
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          {{ form.assunto }}
+                          {% for error in form.assunto.errors %}
+                              <small class="text-danger">{{ error }}</small>
+                          {% endfor %}
+                      </div>
+                  </div>
+
+                  <div class="col-md-12">
+                      <div class="form-group">
+                          {{ form.mensagem }}
+                          {% for error in form.mensagem.errors %}
+                              <small class="text-danger">{{ error }}</small>
+                          {% endfor %}
+                      </div>
+
+                      <div class="submit-button text-left">
+                          <button class="btn btn-common" id="form-submit" type="submit">
+                              Enviar
+                          </button>
+                          <div class="clearfix"></div>
+                      </div>
+                  </div>
+
+              </div>
+          </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-xs-12">
+            <div class="map">
+                <object
+                    style="border:0; height:280px; width:100%;"
+                    data="https://www.google.com/maps?q=Terra%C3%A7o+Shopping,+Bras%C3%ADlia,+DF&output=embed">
+                </object>
+            </div>
+          </div>
+
+        </div>
+      </div> 
+    </section>
